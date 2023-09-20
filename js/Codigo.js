@@ -6,6 +6,19 @@ const tarea = {
 let isEditando = false
 let isValido = false
 
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id)
+}
+
+function allowDrop(event) {
+    event.preventDefault()
+}
+
+function drop(event) {
+    event.preventDefault()
+    const data = event.dataTransfer.getData("text")
+    event.currentTarget.appendChild(document.getElementById(data))
+}
 
 function crearTarea(event) {
     event.preventDefault()
@@ -89,10 +102,11 @@ function registrarTarea() {
         divTarea.remove()
     }
 
-    pendientes.appendChild(divTarea)
+    divTarea.appendChild(pNombre)
     divTarea.appendChild(inputEditar)
     divTarea.appendChild(inputBorrar)
-    divTarea.appendChild(pNombre)
+    pendientes.appendChild(divTarea)
+    
 }
 
 function editarTarea() {

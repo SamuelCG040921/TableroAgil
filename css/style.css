@@ -13,21 +13,24 @@ header{
 .titulo{
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 .tareas{
-    
+
     align-items: center;
     background-color: #e7e5e5;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 25%;
+    justify-content: space-evenly;
 }
 
 .tarea{
     margin-top: 30px;
     margin: 5px;
-    background-color: #8dd7bc;
+    background-color: #8dd7bcc2;
     display: flex;
     justify-content: space-between;
     width: 70%;
@@ -50,9 +53,43 @@ span{
     justify-content: center;
     align-items: center;
 }
-.titulo{
-    padding-right: 50px;
+
+.btn-crear {
+    width: 50%;
+    height: 5%;
+    background:  #58b492;
+    color: #e4e4e4;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 1.1rem;
+    margin: 0.3rem;
+    transition: 0.5s;
+    padding-left: 16%;
+  }
+
+
+.btn-crear:hover {
+    background: #58b492;
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+.btn-editar {
+    width: 50%;
+    height: 5%;
+    background:  #58b492;
+    color: #e4e4e4;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 1.1rem;
+    margin: 0.3rem;
+    transition: 0.5s;
+    padding-left: 16%;
 }
+  
+
 .agregar{
     width: 20px;
     height: 20px;
@@ -72,4 +109,31 @@ span{
 .logo{
     width: 70px;
     height: 70px;
+}
+#tarea-nombre{
+    width: 160%;
+    height: 160%;
+    padding-left: 53%;
+    margin-right: 40%;
+}
+.tarea{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+.tarea .btn-borrar{
+    width: 50%;
+    height: 5%;
+    background:  #58b492;
+    color: #e4e4e4;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 1.1rem;
+    margin: 0.3rem;
+    transition: 0.5s;
 }
