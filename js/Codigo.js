@@ -53,3 +53,22 @@ function validarCampos(nombre) {
         isValido = true
     }
 }
+
+function registrarTarea() {
+    tarea.id = new Date().getTime()
+
+    const pendientes = document.getElementById("pendientes")
+
+    const divTarea = document.createElement('div')
+    divTarea.classList.add('tarea')
+    divTarea.setAttribute('id', tarea.id)
+    divTarea.setAttribute('draggable', true)
+    divTarea.setAttribute('ondragstart', 'drag(event)')
+
+    const pNombre = document.createElement('p')
+    pNombre.setAttribute('id', 'nombre')
+    pNombre.textContent = tarea.nombre
+
+    pendientes.appendChild(divTarea)
+    divTarea.appendChild(pNombre)
+}
